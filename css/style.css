@@ -1,0 +1,18 @@
+/* Navbar */
+
+#mainNav{
+    background-color:#0a1f44;
+}
+/* Hero Section */
+
+#hero{
+    background: linear-gradient(135deg,#0a1f44 0%,#1a4a6b 100%);
+    min-height:90vh;
+}
+
+.hero-overlay{
+    background:rgba(0,20,60,0.65);
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+}
