@@ -16,15 +16,58 @@ body{
     border-radius:30px;
     padding:10px 25px;
 }
+
 /* Navbar */
 
-#mainNav{
-    background-color:#1F2937;
+.custom-navbar{
+    background-color: #0d3f3c;
+    padding: 14px 0;
+    
+}
+
+.custom-navbar .navbar-brand{
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 24px;   
+}
+
+.custom-navbar .navbar-brand:hover{
+    color: #ffffff;
+}
+
+.custom-navbar .navbar-nav{
+    gap: 9px;   /* links ke darmiyan controlled gap */
+}
+
+.custom-navbar .nav-link{
+    color: #ffffff !important;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 8px;
+}
+.custom-navbar .nav-link:hover{
+    color: #ffc107 !important;
+}
+
+.portal-btn{
+    background-color: #ffc107;
+    color: #000;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-left: 18px;
+    display: inline-block;
+}
+
+.portal-btn:hover{
+    background-color: #e0a800;
+    color: #000;
 }
 /* Hero Section */
 
 #hero{
-    background: linear-gradient(135deg,#0d3f3c,#109287);
+   background: linear-gradient(135deg, #128a80, #0d3f3c);
 }
 
 .hero-overlay{
