@@ -152,7 +152,6 @@ body{
   border-radius: 50%;
 }
 
-/* ===== Courses / Inner Pages Hero ===== */
 .page-hero{
     background: linear-gradient(135deg, #0f4d47, #1f8a80);
     color: #fff;
@@ -168,25 +167,118 @@ body{
 
 .page-hero p{
     font-size: 18px;
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto;
     color: rgba(255,255,255,0.9);
 }
 
-/* ===== Course Cards ===== */
+.course-card{
+    background: rgba(0, 0, 0, 0.18);
+    border: none;
+    border-radius: 16px;
+    color: white;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.course-card:hover{
+    transform: translateY(-6px);
+}
+
 .course-card h3{
     margin-bottom: 15px;
+    font-size: 24px;
 }
 
-.course-card p{
-    margin-bottom: 0;
+.course-desc{
+    margin-bottom: 15px;
+    line-height: 1.7;
 }
 
+.learn-btn{
+    background: white;
+    color: #0f4d47;
+    border-radius: 30px;
+    padding: 10px 22px;
+    font-weight: 600;
+    border: none;
+}
+
+.learn-btn:hover{
+    background: #dff7f2;
+    color: #0f4d47;
+}
 /* ===== Active Nav Link ===== */
 .navbar .nav-link.active{
     color: #ffffff !important;
     font-weight: 700;
 }
+/* ===== addmission ===== */
+.apply-list .list-group-item,
+.docs-list .list-group-item{
+    background: rgba(0, 0, 0, 0.18);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    border-radius: 12px !important;
+}
+
+.fee-table{
+    color: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.15);
+}
+
+.fee-table thead th{
+    background: #0f4d47;
+    color: #fff;
+    border: none;
+    padding: 16px;
+}
+
+.fee-table tbody td{
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.276);
+    padding: 14px 16px;
+}
+
+.cta-box{
+    background: linear-gradient(135deg, rgba(15,77,71,0.95), rgba(13, 66, 60, 0.95));
+    padding: 50px 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.cta-box h2{
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.cta-box p{
+    max-width: 700px;
+    margin: 0 auto 25px;
+    font-size: 17px;
+    color: rgba(255,255,255,0.92);
+}
+
+.apply-btn{
+    background: #fff;
+    color: #0f4f48;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: none;
+}
+
+.apply-btn:hover{
+    background: #dff7f2;
+    color: #0f4d47;
+}
+
 /* Footer */
 html, body {
   margin: 0;
