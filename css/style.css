@@ -319,40 +319,65 @@ body{
     border-radius:15px;
 }
 /* contact*/
+.info-card{
+    background:#ffffff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.info-card h3{
+    color:#0f4d47;
+    margin-bottom:15px;
+}
+
+.info-card p{
+    margin:0;
+    line-height:1.8;
+    color:#555;
+}
+
 .form-control{
     border-radius:10px;
     padding:12px;
 }
 
 .form-control:focus{
+    border-color:#0f4d47;
     box-shadow:none;
-    border:2px solid #0f4d47;
-}
-
-.info-card{
-    background:rgba(255,255,255,.08);
-    padding:25px;
-    border-radius:15px;
-    color:white;
-    height:100%;
-}
-
-.info-card h3{
-    color:#fff;
-    margin-bottom:15px;
 }
 
 .apply-btn{
     background:#0f4d47;
     color:white;
-    border:none;
     padding:12px 30px;
+    border:none;
     border-radius:10px;
     font-weight:600;
 }
 
 .apply-btn:hover{
     background:#0c3f3a;
+    color:white;
+}
+
+.social-icon{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#0f4d47;
+    color:white;
+    margin:8px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.social-icon:hover{
+    background:#109287;
+    color:white;
 }
 /* Footer */
 html, body {
