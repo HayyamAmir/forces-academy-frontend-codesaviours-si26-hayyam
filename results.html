@@ -88,168 +88,586 @@
     </div>
 
 </nav>
-<!-- Hero Section -->
-<section class="page-hero">
-    <div class="container text-center">
+<!-- =========================================
+                RESULTS BANNER
+========================================= -->
+
+<section class="page-banner">
+
+    <div class="banner-overlay"></div>
+
+    <div class="container banner-content text-center">
+
         <h1>Results</h1>
+
         <p>
-            Welcome to the Results section of Forces Academy Faisalabad.
-            Here you can view students' academic performance and examination results.
+            Check academic performance and celebrate excellence
+            with Forces Academy.
         </p>
+
+        <a href="#result-search" class="btn banner-btn">
+            Check Result
+        </a>
+
     </div>
+
 </section>
 
-<!-- Results Section -->
-<section class="about-section py-5">
-    <div class="container">
 
-        <!-- Filter Bar -->
-        <div class="row mb-4">
+<!-- =========================================
+              RESULT SEARCH
+========================================= -->
 
-            <div class="col-md-4 mb-3">
-                <select class="form-select">
-                    <option selected>Select Class</option>
-                    <option>FSc Pre-Medical</option>
-                    <option>FSc Pre-Engineering</option>
-                    <option>ICS</option>
-                    <option>Matric Science</option>
-                    <option>Matric Arts</option>
-                </select>
-            </div>
+<section id="result-search" class="section-cream py-5">
 
-            <div class="col-md-4 mb-3">
-                <select class="form-select">
-                    <option selected>Select Year</option>
-                    <option>2026</option>
-                    <option>2025</option>
-                    <option>2024</option>
-                </select>
-            </div>
+<div class="container">
 
-            <div class="col-md-4 mb-3">
-                <button class="btn apply-btn w-100">
-                    Filter Results
-                </button>
-            </div>
+<div class="result-search-card">
 
-        </div>
+<h2 class="section-heading text-center">
+Search Your Result
+</h2>
 
-        <!-- Results Table -->
+<p class="text-center mb-4">
+Enter your details below to view your result.
+</p>
 
-        <div class="table-responsive">
+<div class="row g-3">
 
-            <table class="table result-table align-middle">
+<div class="col-md-4">
+<input type="text"
+class="form-control"
+placeholder="Roll Number">
+</div>
 
-                <thead>
+<div class="col-md-4">
+<select class="form-select">
 
-                    <tr>
-                        <th>Roll No</th>
-                        <th>Student Name</th>
-                        <th>Class</th>
-                        <th>Subject</th>
-                        <th>Marks</th>
-                        <th>Grade</th>
-                    </tr>
+<option>Select Class</option>
 
-                </thead>
+<option>FSc Pre-Medical</option>
 
-                <tbody>
+<option>FSc Pre-Engineering</option>
 
-                    <tr>
-                        <td>101</td>
-                        <td>Ali Khan</td>
-                        <td>FSc Pre-Medical</td>
-                        <td>Biology</td>
-                        <td>92</td>
-                        <td>A+</td>
-                    </tr>
+<option>ICS</option>
 
-                    <tr>
-                        <td>102</td>
-                        <td>Sara Ahmed</td>
-                        <td>FSc Pre-Engineering</td>
-                        <td>Physics</td>
-                        <td>88</td>
-                        <td>A</td>
-                    </tr>
+<option>I.Com</option>
 
-                    <tr>
-                        <td>103</td>
-                        <td>Hamza Malik</td>
-                        <td>ICS</td>
-                        <td>Computer Science</td>
-                        <td>91</td>
-                        <td>A+</td>
-                    </tr>
+<option>Matric Science</option>
 
-                    <tr>
-                        <td>104</td>
-                        <td>Ayesha Noor</td>
-                        <td>Matric Science</td>
-                        <td>Chemistry</td>
-                        <td>84</td>
-                        <td>A</td>
-                    </tr>
+</select>
+</div>
 
-                    <tr>
-                        <td>105</td>
-                        <td>Bilal Hussain</td>
-                        <td>Matric Arts</td>
-                        <td>English</td>
-                        <td>79</td>
-                        <td>B+</td>
-                    </tr>
+<div class="col-md-4">
+<input type="text"
+class="form-control"
+placeholder="Exam Year">
+</div>
 
-                    <tr>
-                        <td>106</td>
-                        <td>Fatima Zahra</td>
-                        <td>FSc Pre-Medical</td>
-                        <td>Chemistry</td>
-                        <td>95</td>
-                        <td>A+</td>
-                    </tr>
+</div>
 
-                    <tr>
-                        <td>107</td>
-                        <td>Hassan Ali</td>
-                        <td>ICS</td>
-                        <td>Mathematics</td>
-                        <td>87</td>
-                        <td>A</td>
-                    </tr>
+<div class="text-center mt-4">
 
-                    <tr>
-                        <td>108</td>
-                        <td>Zainab Tariq</td>
-                        <td>Entry Test Prep</td>
-                        <td>Biology</td>
-                        <td>90</td>
-                        <td>A+</td>
-                    </tr>
+<button class="btn course-btn px-5">
+Check Result
+</button>
 
-                    <tr>
-                        <td>109</td>
-                        <td>Usman Khan</td>
-                        <td>FSc Pre-Engineering</td>
-                        <td>Mathematics</td>
-                        <td>82</td>
-                        <td>B+</td>
-                    </tr>
+</div>
 
-                    <tr>
-                        <td>110</td>
-                        <td>Hira Malik</td>
-                        <td>Matric Science</td>
-                        <td>Physics</td>
-                        <td>89</td>
-                        <td>A</td>
-                    </tr>
+</div>
 
-                </tbody>
+</div>
 
-            </table>
+</section>
+<!-- =========================================
+              RESULT TABLE
+========================================= -->
 
-        </div>
+<section class="section-cream py-5" id="printResult">
+
+<div class="container">
+
+<h2 class="section-heading text-center">
+Latest Result Records
+</h2>
+
+<p class="text-center mb-4">
+Recent examination results of our academic programs.
+</p>
+
+<!-- Download Result Button -->
+
+<div class="d-flex justify-content-end gap-2 mb-4">
+
+<a href="#" class="btn banner-btn">
+
+<i class="fas fa-download me-2"></i>
+
+Download PDF
+
+</a>
+
+<button class="btn btn-outline-success" onclick="printResult()">
+
+<i class="fas fa-print me-2"></i>
+
+Print Result
+
+</button>
+
+</div>
+<!-- Result Table -->
+
+<div class="table-responsive">
+
+<table class="table result-table align-middle text-center">
+
+<thead>
+
+<tr>
+
+<th>Program</th>
+
+<th>Students</th>
+
+<th>Passed</th>
+
+<th>Result</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>FSc Pre-Medical</td>
+
+<td>120</td>
+
+<td>118</td>
+
+<td>98%</td>
+
+<td>
+<span class="status pass">
+Excellent
+</span>
+</td>
+
+</tr>
+
+<tr>
+
+<td>FSc Pre-Engineering</td>
+
+<td>100</td>
+
+<td>95</td>
+
+<td>95%</td>
+
+<td>
+<span class="status pass">
+Very Good
+</span>
+</td>
+
+</tr>
+
+<tr>
+
+<td>ICS</td>
+
+<td>80</td>
+
+<td>75</td>
+
+<td>94%</td>
+
+<td>
+<span class="status pass">
+Very Good
+</span>
+</td>
+
+</tr>
+
+<tr>
+
+<td>I.Com</td>
+
+<td>60</td>
+
+<td>56</td>
+
+<td>93%</td>
+
+<td>
+<span class="status pass">
+Good
+</span>
+</td>
+
+</tr>
+
+<tr>
+
+<td>Matric Science</td>
+
+<td>150</td>
+
+<td>145</td>
+
+<td>97%</td>
+
+<td>
+<span class="status pass">
+Excellent
+</span>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+<!-- =========================================
+            LATEST RESULTS
+========================================= -->
+
+<section class="section-light py-5">
+
+<div class="container">
+
+<h2 class="section-heading text-center">
+Latest Results
+</h2>
+
+<div class="row g-4 mt-3">
+
+<!-- Card 1 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="result-card">
+
+<h3>98%</h3>
+
+<h5>FSc Pre-Medical</h5>
+
+<p>120 Students Appeared</p>
+
+<span>105 Passed</span>
+
+</div>
+
+</div>
+
+<!-- Card 2 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="result-card">
+
+<h3>95%</h3>
+
+<h5>FSc Pre-Engineering</h5>
+
+<p>100 Students Appeared</p>
+
+<span>95 Passed</span>
+
+</div>
+
+</div>
+
+<!-- Card 3 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="result-card">
+
+<h3>97%</h3>
+
+<h5>Matric Science</h5>
+
+<p>150 Students Appeared</p>
+
+<span>145 Passed</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================================
+            TOP PERFORMERS
+========================================= -->
+
+<section class="section-cream py-5">
+
+<div class="container">
+
+<h2 class="section-heading text-center">
+Top Performers
+</h2>
+
+<p class="text-center mb-5">
+Congratulations to our outstanding students for their exceptional achievements.
+</p>
+
+<div class="row g-4">
+
+<!-- Student 1 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="topper-card">
+
+<img src="images/student1.jpg" alt="Student">
+
+<h4>Ali Ahmed</h4>
+
+<span>FSc Pre-Medical</span>
+
+<h3>98%</h3>
+
+</div>
+
+</div>
+
+<!-- Student 2 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="topper-card">
+
+<img src="images/student2.jpg" alt="Student">
+
+<h4>Ayesha Khan</h4>
+
+<span>ICS</span>
+
+<h3>97%</h3>
+
+</div>
+
+</div>
+
+<!-- Student 3 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="topper-card">
+
+<img src="images/student3.jpg" alt="Student">
+
+<h4>Hamza Ali</h4>
+
+<span>FSc Engineering</span>
+
+<h3>96%</h3>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+          ACHIEVEMENT STATISTICS
+========================================= -->
+
+<section class="section-light py-5">
+
+<div class="container">
+
+<h2 class="section-heading text-center">
+Our Achievements
+</h2>
+
+<div class="row g-4 mt-4">
+
+<div class="col-md-3">
+
+<div class="stats-card">
+
+<h2>98%</h2>
+
+<p>Overall Result</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="stats-card">
+
+<h2>500+</h2>
+
+<p>Successful Students</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="stats-card">
+
+<h2>50+</h2>
+
+<p>Position Holders</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="stats-card">
+
+<h2>20+</h2>
+
+<p>Years of Excellence</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+         STUDENT TESTIMONIALS
+========================================= -->
+
+<section class="section-cream py-5">
+
+<div class="container">
+
+<h2 class="section-heading text-center">
+What Our Students Say
+</h2>
+
+<div class="row g-4 mt-4">
+
+<div class="col-md-4">
+
+<div class="testimonial-card">
+
+<p>
+
+"The teachers were supportive and helped me achieve excellent grades."
+
+</p>
+
+<h5>Ali Ahmed</h5>
+
+<span>FSc Pre-Medical</span>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="testimonial-card">
+
+<p>
+
+"The learning environment is modern and motivating."
+
+</p>
+
+<h5>Ayesha Khan</h5>
+
+<span>ICS Student</span>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="testimonial-card">
+
+<p>
+
+"Forces Academy gave me confidence to achieve my goals."
+
+</p>
+
+<h5>Hamza Ali</h5>
+
+<span>Engineering Student</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+                CTA
+========================================= -->
+
+<section class="cta-section">
+
+<div class="container text-center">
+
+<h2>
+
+Ready To Be Our Next Top Performer?
+
+</h2>
+
+<p>
+
+Join Forces Academy today and build a bright future with quality education.
+
+</p>
+
+<a href="admissions.html" class="btn banner-btn">
+
+Apply Now
+
+</a>
+
+</div>
+
+</section>
+
 
         <!-- Note -->
 
