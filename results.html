@@ -135,13 +135,17 @@ Enter your details below to view your result.
 <div class="row g-3">
 
 <div class="col-md-4">
-<input type="text"
+<input
+type="text"
+id="rollNo"
 class="form-control"
 placeholder="Roll Number">
 </div>
 
 <div class="col-md-4">
-<select class="form-select">
+<select
+id="program"
+class="form-select">
 
 <option>Select Class</option>
 
@@ -159,7 +163,9 @@ placeholder="Roll Number">
 </div>
 
 <div class="col-md-4">
-<input type="text"
+<input
+type="text"
+id="examYear"
 class="form-control"
 placeholder="Exam Year">
 </div>
@@ -168,7 +174,9 @@ placeholder="Exam Year">
 
 <div class="text-center mt-4">
 
-<button class="btn course-btn px-5">
+<button
+id="checkResult"
+class="btn course-btn px-5">
 Check Result
 </button>
 
@@ -179,6 +187,15 @@ Check Result
 </div>
 
 </section>
+<p
+id="resultMessage"
+style="display:none;
+color:red;
+font-weight:600;
+text-align:center;
+margin-bottom:20px;">
+Result Not Found.
+</p>
 <!-- =========================================
               RESULT TABLE
 ========================================= -->
@@ -581,48 +598,107 @@ Apply Now
 <!-- Footer -->
 <footer class="site-footer">
   <div class="container">
+
     <div class="footer-content">
-      
+
+      <!-- About -->
       <div class="footer-col">
+
         <h3>Forces Academy Faisalabad</h3>
+
         <p>
           Providing quality education, discipline, and leadership development
           for a brighter future.
         </p>
+
       </div>
 
+      <!-- Quick Links -->
       <div class="footer-col">
+
         <h3>Quick Links</h3>
+
         <ul class="footer-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#admissions">Admissions</a></li>
-          <li><a href="#results">Results</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
+
+          <li><a href="index.html">Home</a></li>
+
+          <li><a href="about.html">About</a></li>
+
+          <li><a href="courses.html">Courses</a></li>
+
+          <li><a href="admissions.html">Admissions</a></li>
+
+          <li><a href="results.html">Results</a></li>
+
+          <li><a href="gallery.html">Gallery</a></li>
+
+          <li><a href="contact.html">Contact</a></li>
+
         </ul>
+
       </div>
 
+      <!-- Contact -->
       <div class="footer-col">
+
         <h3>Contact Us</h3>
 
-        <p><i class="fas fa-map-marker-alt"></i> Faisalabad, Pakistan</p>
-        <p><i class="fas fa-phone"></i> +92 300 1234567</p>
-        <p><i class="fas fa-envelope"></i> info@forcesacademy.com</p>
+        <p>
+          <i class="fas fa-map-marker-alt"></i>
+          Faisalabad, Pakistan
+        </p>
+
+        <p>
+          <i class="fas fa-phone"></i>
+          +92 300 1234567
+        </p>
+
+        <p>
+          <i class="fas fa-envelope"></i>
+          info@forcesacademy.com
+        </p>
 
         <div class="social-links">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/forcesacademyfaisalabad"
+             target="_blank"
+             aria-label="Facebook">
+
+             <i class="fab fa-facebook-f"></i>
+
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/forcesacademyfaisalabad"
+             target="_blank"
+             aria-label="Instagram">
+
+             <i class="fab fa-instagram"></i>
+
+          </a>
+
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@forcesacademyfaisalabad"
+             target="_blank"
+             aria-label="YouTube">
+
+             <i class="fab fa-youtube"></i>
+
+          </a>
+
         </div>
+
       </div>
 
     </div>
 
     <div class="footer-bottom">
+
       <p>&copy; 2026 Forces Academy Faisalabad. All Rights Reserved.</p>
+
     </div>
+
   </div>
 </footer>
 
