@@ -338,8 +338,109 @@ body{
     color:#FFC107;
     font-size:22px;
 }
+.testimonial-slider{
+     position:relative;
+    padding-bottom:60px;
+}
+/* Left & Right Arrow Buttons */
+.carousel-control-prev,
+.carousel-control-next{
+    width: 60px;
+    opacity: 1;
+}
 
+/* Arrow Icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
 
+    width: 35px;
+    height: 35px;
+
+    filter:
+        brightness(0) invert(1)
+        drop-shadow(0 0 8px rgba(0,0,0,.7))
+        drop-shadow(0 0 15px rgba(255,255,255,.4));
+
+    background-size: 100% 100%;
+}
+/*=========================================
+        CUSTOM TESTIMONIAL ARROWS
+=========================================*/
+
+.custom-arrow{
+
+    font-size:42px;
+    color:#ffffff;
+    font-weight:900;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,.8),
+        0 0 18px rgba(255,255,255,.6),
+        0 0 30px rgba(255,255,255,.3);
+
+    transition:.3s ease;
+
+}
+
+.carousel-control-prev:hover .custom-arrow,
+.carousel-control-next:hover .custom-arrow{
+
+    color:#FFC107;
+
+    text-shadow:
+        0 0 10px rgba(255,193,7,.8),
+        0 0 22px rgba(255,193,7,.6),
+        0 0 35px rgba(255,193,7,.4);
+
+    transform:scale(1.15);
+
+}
+/*==============================
+    TESTIMONIAL INDICATORS
+==============================*/
+
+.carousel-indicators{
+    position:absolute;
+    bottom:-30px;
+    left:50%;
+    transform:translateX(-50%);
+    margin:0;
+}
+
+.carousel-indicators [data-bs-target]{
+
+ width:6px !important;
+height:6px !important;
+flex:0 0 6px;
+
+    margin:0 8px !important;
+
+    border-radius:50% !important;
+
+    background:rgba(255,255,255,.35) !important;
+
+    border:2px solid rgba(255,255,255,.9);
+
+    opacity:1;
+
+    transition:.3s ease;
+
+}
+
+.carousel-indicators .active{
+
+    width:10px !important;
+    height:10px !important;
+
+    flex:0 0 10px;
+
+    background:#ffffff !important;
+
+    border:2px solid #ffffff;
+
+    transform:scale(1.15);
+
+}
 /*=========================================
             GALLERY PREVIEW
 =========================================*/
@@ -1697,6 +1798,55 @@ border:none;
 #contact-form iframe{
     height:300px;
 }
+
+}
+/*=========================================
+        BACK TO TOP BUTTON
+=========================================*/
+
+#backToTop{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#0D3F3C;
+
+    color:#fff;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:999;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    transition:.3s;
+
+}
+
+#backToTop:hover{
+
+    background:#FFC107;
+
+    color:#0D3F3C;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.35);
 
 }
 /*=========================================
