@@ -3,10 +3,6 @@
 
 <head>
 
-<link rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -156,7 +152,6 @@ Explore the vibrant learning environment, modern facilities and exciting student
 
 </section>
 
-
 <!-- =========================================
                 IMAGE GALLERY
 ========================================= -->
@@ -171,17 +166,15 @@ Explore the vibrant learning environment, modern facilities and exciting student
 
 <div class="col-lg-4 col-md-6">
 
-<div class="gallery-card">
+<div class="gallery-card" onclick="openImage('images/gallery1.jpg')">
 
-<a href="images/gallery1.jpg" class="gallery-popup">
-    <img src="images/gallery1.jpg" alt="Campus">
-</a>
+    <img src="images/gallery1.jpg"
+         class="img-fluid"
+         alt="Campus">
 
-<div class="gallery-overlay">
-
-<h5>Campus View</h5>
-
-</div>
+    <div class="gallery-overlay">
+        <h5>Campus View</h5>
+    </div>
 
 </div>
 
@@ -193,9 +186,11 @@ Explore the vibrant learning environment, modern facilities and exciting student
 
 <div class="gallery-card">
 
-<a href="images/gallery2.jpg" class="gallery-popup">
-    <img src="images/gallery2.jpg" alt="Classroom">
-</a>
+<img src="images/gallery2.jpg"
+class="img-fluid"
+alt="Classroom"
+onclick="event.stopPropagation(); openImage(this.src)"
+style="cursor:pointer;">
 
 <div class="gallery-overlay">
 
@@ -213,9 +208,11 @@ Explore the vibrant learning environment, modern facilities and exciting student
 
 <div class="gallery-card">
 
-<a href="images/gallery3.jpg" class="gallery-popup">
-    <img src="images/gallery3.jpg" alt="Lab">
-</a>
+<img src="images/gallery3.jpg"
+class="img-fluid"
+alt="Lab"
+onclick="event.stopPropagation(); openImage(this.src)"
+style="cursor:pointer;">
 
 <div class="gallery-overlay">
 
@@ -233,10 +230,11 @@ Explore the vibrant learning environment, modern facilities and exciting student
 
 <div class="gallery-card">
 
-<a href="images/gallery4.jpg" class="gallery-popup">
-    <img src="images/gallery4.jpg" alt="Sports">
-</a>
-
+<img src="images/gallery4.jpg"
+class="img-fluid"
+alt="Sports"
+onclick="event.stopPropagation(); openImage(this.src)"
+style="cursor:pointer;">
 <div class="gallery-overlay">
 
 <h5>Sports Day</h5>
@@ -253,9 +251,11 @@ Explore the vibrant learning environment, modern facilities and exciting student
 
 <div class="gallery-card">
 
-<a href="images/gallery5.jpg" class="gallery-popup">
-    <img src="images/gallery5.jpg" alt="Event">
-</a>
+<img src="images/gallery5.jpg"
+class="img-fluid"
+alt="Event"
+onclick="event.stopPropagation(); openImage(this.src)"
+style="cursor:pointer;">
 
 <div class="gallery-overlay">
 
@@ -273,9 +273,11 @@ Explore the vibrant learning environment, modern facilities and exciting student
 
 <div class="gallery-card">
 
-<a href="images/gallery6.jpg" class="gallery-popup">
-    <img src="images/gallery6.jpg" alt="Graduation">
-</a>
+<img src="images/gallery6.jpg"
+class="img-fluid"
+alt="Graduation"
+onclick="event.stopPropagation(); openImage(this.src)"
+style="cursor:pointer;">
 
 <div class="gallery-overlay">
 
@@ -292,7 +294,6 @@ Explore the vibrant learning environment, modern facilities and exciting student
 </div>
 
 </section>
-
 
 <!-- =========================================
              STUDENT LIFE
@@ -337,6 +338,15 @@ Apply Now
 </div>
 
 </section>
+<!-- Image Popup -->
+
+<div id="imagePopup" class="image-popup">
+
+<span class="close-popup" onclick="closeImage()">&times;</span>
+
+<img id="popupImg" src="" alt="Gallery Image">
+
+</div>
 <!-- =========================================
                CTA
 ========================================= -->

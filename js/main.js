@@ -297,3 +297,38 @@ if(backToTop){
     });
 
 }
+
+//=========================================
+// Gallery Image Popup
+//=========================================
+
+function openImage(src){
+
+    document.getElementById("imagePopup").style.display="flex";
+    document.getElementById("popupImg").src=src;
+
+}
+
+function closeImage(){
+
+    document.getElementById("imagePopup").style.display="none";
+
+}
+
+// Popup ko image ke bahar click karke bhi band karna
+
+const popup=document.getElementById("imagePopup");
+
+if(popup){
+
+popup.addEventListener("click",function(e){
+
+if(e.target===this){
+
+closeImage();
+
+}
+
+});
+
+}
