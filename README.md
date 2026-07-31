@@ -15,19 +15,19 @@ This project was built using HTML5, CSS3, Bootstrap 5, and JavaScript. It provid
 
 # Screenshots
 
-## 🏠 Home Page
+## Home Page
 
 ![Home Page](images/home-screenshot.png)
 
 ---
 
-## 📖 About Page
+## About Page
 
 ![About Page](images/about-screenshot.png)
 
 ---
 
-## 📚 Courses Page
+## Courses Page
 
 ![Courses Page](images/courses-screenshot.png)
 
