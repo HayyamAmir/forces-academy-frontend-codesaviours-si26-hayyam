@@ -1,334 +1,365 @@
 //=========================================
-// Animated Stats Counter
+// DOM Loaded
 //=========================================
 
-const counters = document.querySelectorAll(".counter");
+document.addEventListener("DOMContentLoaded", function () {
 
-const observer = new IntersectionObserver((entries)=>{
+    //=========================================
+    // Animated Stats Counter
+    //=========================================
 
-entries.forEach(entry=>{
+    const counters = document.querySelectorAll(".counter");
 
-if(entry.isIntersecting){
+    if (counters.length > 0) {
 
-const counter = entry.target;
+        const observer = new IntersectionObserver((entries) => {
 
-const target = +counter.dataset.target;
+            entries.forEach(entry => {
 
-let count = 0;
+                if (!entry.isIntersecting) return;
 
-const speed = target / 100;
+                const counter = entry.target;
+                const target = Number(counter.dataset.target);
 
-const update = ()=>{
+                let count = 0;
+                const speed = target / 100;
 
-count += speed;
+                function updateCounter() {
 
-if(count < target){
+                    count += speed;
 
-counter.innerText = Math.ceil(count);
+                    if (count < target) {
 
-requestAnimationFrame(update);
+                        counter.innerText = Math.ceil(count);
+                        requestAnimationFrame(updateCounter);
 
-}
+                    } else {
 
-else{
+                        if (target === 98) {
 
-if(target==98){
+                            counter.innerText = "98%";
 
-counter.innerText="98%";
+                        } else {
 
-}
+                            counter.innerText = target + "+";
 
-else{
+                        }
 
-counter.innerText=target+"+";
+                    }
 
-}
+                }
 
-}
+                updateCounter();
+                observer.unobserve(counter);
 
-};
+            });
 
-update();
+        }, {
+            threshold: 0.5
+        });
 
-observer.unobserve(counter);
+        counters.forEach(counter => observer.observe(counter));
 
-}
+    }
 
-});
+    //=========================================
+    // Print Result
+    //=========================================
 
-},{
-threshold:0.5
-});
+    window.printResult = function () {
 
-counters.forEach(counter=>{
-observer.observe(counter);
-});
+        const printArea = document.getElementById("printResult");
 
-// ==========================================
-// PRINT RESULT TABLE
-// ==========================================
+        if (!printArea) return;
 
-function printResult() {
+        const originalContent = document.body.innerHTML;
 
-    let printContents = document.getElementById("printResult").innerHTML;
-    let originalContents = document.body.innerHTML;
+        document.body.innerHTML = printArea.innerHTML;
 
-    document.body.innerHTML = printContents;
+        window.print();
 
-    window.print();
+        document.body.innerHTML = originalContent;
 
-    document.body.innerHTML = originalContents;
+        location.reload();
 
-    location.reload();
+    };
 
-}
+    //=========================================
+    // Contact Form Validation
+    //=========================================
 
-// ==========================================
-// CONTACT FORM VALIDATION
-// ==========================================
+    const form = document.getElementById("contactForm");
 
-const form = document.getElementById("contactForm");
+    if (form) {
 
-if (form) {
+        form.addEventListener("submit", function (e) {
 
-    form.addEventListener("submit", function (e) {
+            e.preventDefault();
 
-        e.preventDefault();
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const subject = document.getElementById("subject").value.trim();
+            const message = document.getElementById("message").value.trim();
 
-        document.getElementById("nameError").innerHTML = "";
-        document.getElementById("emailError").innerHTML = "";
-        document.getElementById("phoneError").innerHTML = "";
-        document.getElementById("subjectError").innerHTML = "";
-        document.getElementById("messageError").innerHTML = "";
-        document.getElementById("successMessage").innerHTML = "";
+            const nameError = document.getElementById("nameError");
+            const emailError = document.getElementById("emailError");
+            const phoneError = document.getElementById("phoneError");
+            const subjectError = document.getElementById("subjectError");
+            const messageError = document.getElementById("messageError");
+            const successMessage = document.getElementById("successMessage");
 
-        let name = document.getElementById("name").value.trim();
-        let email = document.getElementById("email").value.trim();
-        let phone = document.getElementById("phone").value.trim();
-        let subject = document.getElementById("subject").value.trim();
-        let message = document.getElementById("message").value.trim();
+            nameError.innerHTML = "";
+            emailError.innerHTML = "";
+            phoneError.innerHTML = "";
+            subjectError.innerHTML = "";
+            messageError.innerHTML = "";
+            successMessage.innerHTML = "";
 
-        let valid = true;
+            let valid = true;
 
-        if (name == "") {
-            document.getElementById("nameError").innerHTML = "Full Name is required.";
-            valid = false;
-        }
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            const phonePattern = /^[0-9]{11}$/;
 
-        let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (name === "") {
 
-        if (email == "") {
-            document.getElementById("emailError").innerHTML = "Email is required.";
-            valid = false;
-        }
-        else if (!email.match(emailPattern)) {
-            document.getElementById("emailError").innerHTML = "Enter a valid email.";
-            valid = false;
-        }
+                nameError.innerHTML = "Full Name is required.";
+                valid = false;
 
-        let phonePattern = /^[0-9]{11}$/;
+            }
 
-        if (phone == "") {
-            document.getElementById("phoneError").innerHTML = "Phone Number is required.";
-            valid = false;
-        }
-        else if (!phone.match(phonePattern)) {
-            document.getElementById("phoneError").innerHTML = "Enter 11 digit phone number.";
-            valid = false;
-        }
+            if (email === "") {
 
-        if (subject == "") {
-            document.getElementById("subjectError").innerHTML = "Subject is required.";
-            valid = false;
-        }
+                emailError.innerHTML = "Email is required.";
+                valid = false;
 
-        if (message == "") {
-            document.getElementById("messageError").innerHTML = "Message is required.";
-            valid = false;
-        }
+            } else if (!emailPattern.test(email)) {
 
-        if (valid) {
+                emailError.innerHTML = "Enter a valid email.";
+                valid = false;
 
-            document.getElementById("successMessage").innerHTML =
-                "Your message has been sent successfully!";
+            }
 
-            form.reset();
+            if (phone === "") {
 
-        }
+                phoneError.innerHTML = "Phone Number is required.";
+                valid = false;
 
-    });
+            } else if (!phonePattern.test(phone)) {
 
-}
+                phoneError.innerHTML = "Enter 11 digit phone number.";
+                valid = false;
 
-// ==========================================
-// COURSE SEARCH
-// ==========================================
+            }
 
-const searchBtn = document.getElementById("searchBtn");
+            if (subject === "") {
 
-if (searchBtn) {
+                subjectError.innerHTML = "Subject is required.";
+                valid = false;
 
-    searchBtn.addEventListener("click", function () {
+            }
 
-        let search = document
-            .getElementById("courseSearch")
-            .value
-            .toLowerCase()
-            .trim();
+            if (message === "") {
 
-        let cards = document.querySelectorAll(".course-card");
+                messageError.innerHTML = "Message is required.";
+                valid = false;
 
-        let found = false;
+            }
 
-        cards.forEach(function (card) {
+            if (valid) {
 
-            let text = card.innerText.toLowerCase();
-
-            if (text.includes(search) || search === "") {
-
-                card.parentElement.style.display = "";
-
-                found = true;
-
-            } else {
-
-                card.parentElement.style.display = "none";
+                successMessage.innerHTML = "Your message has been sent successfully!";
+                form.reset();
 
             }
 
         });
 
-    });
+    }
 
-}
-//=====================================
-// Result Search
-//=====================================
+    //=========================================
+    // Course Search
+    //=========================================
 
-const resultBtn = document.getElementById("checkResult");
+    const searchBtn = document.getElementById("searchBtn");
 
-if(resultBtn){
+    if (searchBtn) {
 
-resultBtn.addEventListener("click",function(){
+        searchBtn.addEventListener("click", function () {
 
-let roll=document.getElementById("rollNo").value.toLowerCase().trim();
+            const search = document
+                .getElementById("courseSearch")
+                .value
+                .toLowerCase()
+                .trim();
 
-let program=document.getElementById("program").value.toLowerCase();
+            const cards = document.querySelectorAll(".course-card");
 
-let year=document.getElementById("examYear").value.toLowerCase().trim();
+            cards.forEach(card => {
 
-let rows=document.querySelectorAll(".result-table tbody tr");
+                const text = card.innerText.toLowerCase();
 
-let found=false;
+                card.parentElement.style.display =
+                    (text.includes(search) || search === "")
+                        ? ""
+                        : "none";
 
-rows.forEach(function(row){
+            });
 
-let text=row.innerText.toLowerCase();
-
-if(
-
-(roll=="" || text.includes(roll))
-
-&&
-
-(program=="select class" || text.includes(program))
-
-&&
-
-(year=="" || text.includes(year))
-
-){
-
-row.style.display="";
-
-found=true;
-
-}
-
-else{
-
-row.style.display="none";
-
-}
-
-});
-
-if(found){
-
-document.getElementById("resultMessage").style.display="none";
-
-}
-
-else{
-
-document.getElementById("resultMessage").style.display="block";
-
-}
-
-});
-
-}
-//=========================================
-// Back To Top Button
-//=========================================
-
-const backToTop = document.getElementById("backToTop");
-
-if(backToTop){
-
-    window.addEventListener("scroll", function(){
-
-        if(window.scrollY > 300){
-            backToTop.style.display = "block";
-        }
-        else{
-            backToTop.style.display = "none";
-        }
-
-    });
-
-    backToTop.addEventListener("click", function(){
-
-        window.scrollTo({
-            top:0,
-            behavior:"smooth"
         });
 
-    });
+    }
+        //=========================================
+    // Result Search
+    //=========================================
 
-}
+    const resultBtn = document.getElementById("checkResult");
 
-//=========================================
-// Gallery Image Popup
-//=========================================
+    if (resultBtn) {
 
-function openImage(src){
+        resultBtn.addEventListener("click", function () {
 
-    document.getElementById("imagePopup").style.display="flex";
-    document.getElementById("popupImg").src=src;
+            const roll = document.getElementById("rollNo").value.toLowerCase().trim();
+            const program = document.getElementById("program").value.toLowerCase();
+            const year = document.getElementById("examYear").value.toLowerCase().trim();
 
-}
+            const rows = document.querySelectorAll(".result-table tbody tr");
+            const resultMessage = document.getElementById("resultMessage");
 
-function closeImage(){
+            let found = false;
 
-    document.getElementById("imagePopup").style.display="none";
+            rows.forEach(row => {
 
-}
+                const text = row.innerText.toLowerCase();
 
-// Popup ko image ke bahar click karke bhi band karna
+                const match =
+                    (roll === "" || text.includes(roll)) &&
+                    (program === "select class" || text.includes(program)) &&
+                    (year === "" || text.includes(year));
 
-const popup=document.getElementById("imagePopup");
+                row.style.display = match ? "" : "none";
 
-if(popup){
+                if (match) {
+                    found = true;
+                }
 
-popup.addEventListener("click",function(e){
+            });
 
-if(e.target===this){
+            if (resultMessage) {
+                resultMessage.style.display = found ? "none" : "block";
+            }
 
-closeImage();
+        });
 
-}
+    }
+
+    //=========================================
+    // Back To Top Button
+    //=========================================
+
+    const backToTop = document.getElementById("backToTop");
+
+    if (backToTop) {
+
+        window.addEventListener("scroll", function () {
+
+            backToTop.style.display =
+                window.scrollY > 300 ? "block" : "none";
+
+        });
+
+        backToTop.addEventListener("click", function () {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        });
+
+    }
+
+    //=========================================
+    // Gallery Image Popup
+    //=========================================
+
+    window.openImage = function (src) {
+
+        const popup = document.getElementById("imagePopup");
+        const popupImg = document.getElementById("popupImg");
+
+        if (!popup || !popupImg) return;
+
+        popup.style.display = "flex";
+        popupImg.src = src;
+
+    };
+
+    window.closeImage = function () {
+
+        const popup = document.getElementById("imagePopup");
+
+        if (popup) {
+            popup.style.display = "none";
+        }
+
+    };
+
+    const popup = document.getElementById("imagePopup");
+
+    if (popup) {
+
+        popup.addEventListener("click", function (e) {
+
+            if (e.target === popup) {
+
+                closeImage();
+
+            }
+
+        });
+
+    }
 
 });
+//=========================================
+// DARK MODE
+//=========================================
+
+const themeToggle = document.getElementById("themeToggle");
+
+if(themeToggle){
+
+    // Load saved theme
+    if(localStorage.getItem("theme") === "dark"){
+
+        document.body.classList.add("dark-mode");
+        themeToggle.innerHTML = "☀ <span class='theme-text'>Light</span>";
+
+    }else{
+
+        themeToggle.innerHTML = "🌙 <span class='theme-text'>Dark</span>";
+
+    }
+
+    themeToggle.addEventListener("click",function(){
+
+        document.body.classList.toggle("dark-mode");
+
+        if(document.body.classList.contains("dark-mode")){
+
+            localStorage.setItem("theme","dark");
+
+            themeToggle.innerHTML = "☀ <span class='theme-text'>Light</span>";
+
+        }else{
+
+            localStorage.setItem("theme","light");
+
+            themeToggle.innerHTML = "🌙 <span class='theme-text'>Dark</span>";
+
+        }
+
+    });
 
 }

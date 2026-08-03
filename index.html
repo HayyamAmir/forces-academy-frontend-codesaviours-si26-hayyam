@@ -33,13 +33,17 @@
         </a>
 
         <!-- Mobile Hamburger Button -->
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navMenu">
+        <button class="navbar-toggler border-0 shadow-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
 
-            <span class="navbar-toggler-icon"></span>
+    <i class="fas fa-bars text-white fs-3"></i>
 
-        </button>
+</button>
 
         <!-- Navigation Links -->
         <div class="collapse navbar-collapse" id="navMenu">
@@ -74,12 +78,20 @@
                     <a class="nav-link" href="contact.html">Contact</a>
                 </li>
 
-                <!-- Student Portal Button -->
-                <li class="nav-item">
-                    <a class="btn btn-warning fw-semibold px-3" href="#">
-                        Student Portal
-                    </a>
-                </li>
+               <li class="nav-item d-flex align-items-center">
+
+    <!-- Student Portal -->
+    <a class="btn btn-warning fw-semibold px-3 me-2" href="#">
+        Student Portal
+    </a>
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-btn" title="Toggle Theme">
+        🌙
+        <span class="theme-text">Dark</span>
+    </button>
+
+</li>
 
             </ul>
 
@@ -87,7 +99,8 @@
 
     </div>
 
-</nav>
+</nav> 
+
    <!--=========================================
                 HERO SECTION
 ==========================================-->
