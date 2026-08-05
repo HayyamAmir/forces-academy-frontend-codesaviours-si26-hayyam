@@ -4,19 +4,19 @@
     box-sizing:border-box;
 }
 
-body{
+
+    body{
     font-family:'Poppins',sans-serif;
-}
-.btn-warning{
-    border-radius:30px;
-    padding:10px 25px;
+    background:#fff;
+    color:#333;
+    line-height:1.6;
 }
 
+.btn-warning,
 .btn-outline-light{
     border-radius:30px;
     padding:10px 25px;
 }
-
 /* Navbar */
 
 .custom-navbar{
@@ -36,33 +36,43 @@ body{
 }
 
 .custom-navbar .navbar-nav{
-    gap: 9px;   /* links ke darmiyan controlled gap */
+    gap: 6px;   /* links ke darmiyan controlled gap */
 }
 
 .custom-navbar .nav-link{
     color: #ffffff !important;
     font-size: 1rem;
     font-weight: 500;
-    margin: 0 8px;
+    margin: 0 5px;
 }
 .custom-navbar .nav-link:hover{
     color: #ffc107 !important;
 }
 
 .portal-btn{
-    background-color: #ffc107;
-    color: #000;
-    font-weight: 600;
-    padding: 10px 22px;
-    border-radius: 30px;
-    text-decoration: none;
-    margin-left: 18px;
-    display: inline-block;
+    background:#FFC107;
+    color:#000;
+    text-decoration:none;
+    font-weight:600;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:10px 22px;
+    min-width:140px;
+    height:48px;
+
+    border-radius:30px;
+
+    white-space:nowrap;
+
+    transition:.3s;
 }
 
 .portal-btn:hover{
-    background-color: #e0a800;
-    color: #000;
+    background:#e0a800;
+    color:#000;
 }
 /*=========================
       MOBILE NAVBAR
@@ -104,7 +114,6 @@ body{
         margin:8px 0;
 
     }
-
     .portal-btn,
     .btn-warning{
 
@@ -113,56 +122,7 @@ body{
         margin-top:10px;
 
     }
-
-} 
-/*=========================================
-           DARKMODE THEME BUTTON
-=========================================*/
-
-.theme-btn{
-
-    display:flex;
-    align-items:center;
-    gap:8px;
-
-    background:transparent;
-
-    color:#fff;
-
-    border:2px solid #fff;
-
-    border-radius:30px;
-
-    padding:8px 16px;
-
-    font-size:15px;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.theme-btn:hover{
-
-    background:#fff;
-
-    color:#0D3F3C;
-
-}
-
-.theme-btn .theme-text{
-
-    font-size:14px;
-
-}
-
-/* Mobile */
-
-@media(max-width:991px){
-
+ /* theme*/
 .theme-btn{
 
     margin-top:10px;
@@ -170,10 +130,27 @@ body{
     width:fit-content;
 
 }
-
+ /* hero*/
+.hero-section{
+    text-align:center;
 }
 
+.hero-section h1{
+    font-size:40px;
+}
 
+.hero-card{
+    margin-top:40px;
+}
+
+.quick-stats{
+    margin-top:40px;
+}
+
+.hero-list{
+    gap:20px;
+}
+} 
 
 /*=========================================
             HERO SECTION
@@ -225,6 +202,7 @@ body{
     display:flex;
     gap:15px;
     flex-wrap:wrap;
+    align-items:center;
 }
 
 .hero-btn-outline{
@@ -319,14 +297,16 @@ body{
 }
 .stat-card h3{
     color:#0D3F3C;
+    font-size:34px;
     font-weight:700;
+     transition:.3s;
 }
 
 .stat-card p{
     color:#666;
+    font-size:16px;
     margin:0;
 }
-
 .stat-card:hover i,
 .stat-card:hover h3,
 .stat-card:hover p{
@@ -337,16 +317,7 @@ body{
    transform:translateY(-6px);
 }
 
-.stat-card h3{
-    font-size:34px;
-    font-weight:700;
-    transition:.3s;
-}
 
-.stat-card p{
-    font-size:16px;
-    margin:0;
-}
 /*=========================================
             HOME LIST
 =========================================*/
@@ -588,30 +559,6 @@ flex:0 0 6px;
             RESPONSIVE
 =========================================*/
 
-@media(max-width:991px){
-
-.hero-section{
-    text-align:center;
-}
-
-.hero-section h1{
-    font-size:40px;
-}
-
-.hero-card{
-    margin-top:40px;
-}
-
-.quick-stats{
-    margin-top:40px;
-}
-
-.hero-list{
-    gap:20px;
-}
-
-}
-
 @media(max-width:768px){
 
 .hero-section h1{
@@ -811,24 +758,6 @@ box-shadow:0 10px 20px rgba(0,0,0,.25);
 
 }
 
-/* ---------- Features ---------- */
-
-.feature-card i{
-
-    font-size:40px;
-
-    color:#FFC107;
-
-    margin-bottom:15px;
-
-}
-
-.feature-card h5{
-
-    color:#0D3F3C;
-
-}
-
 /* ---------- Statistics ---------- */
 
 .section-light h2{
@@ -916,11 +845,6 @@ height:150px;
     padding:80px 0;
 }
 
-.section-heading{
-    color:#0D3F3C;
-    font-weight:700;
-    margin-bottom:20px;
-}
 
 .section-text{
     max-width:700px;
@@ -932,19 +856,6 @@ height:150px;
 
 .banner-buttons{
     margin-top:25px;
-}
-
-.banner-btn{
-    background:#FFC107;
-    color:#0D3F3C;
-    border-radius:30px;
-    padding:12px 30px;
-    font-weight:600;
-}
-
-.banner-btn:hover{
-    background:#e6ac00;
-    color:#fff;
 }
 
 .banner-btn-outline{
@@ -1073,24 +984,6 @@ height:150px;
     color:#0D3F3C;
 }
 
-/* CTA */
-
-.cta-section{
-    background:linear-gradient(135deg,#128A80,#0D3F3C);
-    color:#fff;
-    text-align:center;
-    padding:80px 20px;
-}
-
-.cta-section h2{
-    font-weight:700;
-}
-
-.cta-section p{
-    margin:20px auto;
-    max-width:650px;
-    color:#f5f5f5;
-}
 
 /* Responsive */
 
@@ -1289,19 +1182,6 @@ border:none;
     background:#FDF6EC;
     color:#0D3F3C;
 }
-/* CTA */
-
-.cta-section{
-    background:linear-gradient(135deg,#128A80,#0D3F3C);
-    color:white;
-    padding:70px 20px;
-    text-align:center;
-}
-
-.cta-section h2{
-    font-weight:700;
-}
-
 
 /* Mobile */
 
@@ -1529,9 +1409,9 @@ border:none;
 .testimonial-card span{
     color:#128A80;
 }
-
-
-/* ---------- Responsive ---------- */
+/*=========================================
+            RESPONSIVE
+=========================================*/
 
 @media(max-width:768px){
 
@@ -1550,6 +1430,9 @@ border:none;
     width:150px;
     height:150px;
 }
+
+}
+
 /*=========================================
             PRINT STYLE
 =========================================*/
@@ -1560,7 +1443,6 @@ border:none;
     display:none !important;
 }
 
-}
 }
 /*=========================================
             GALLERY MENU
@@ -1645,11 +1527,11 @@ border:none;
             STUDENT LIFE
 =========================================*/
 
-.section-light img{
+.student-life img{
     border-radius:18px;
 }
 
-.section-light .banner-btn{
+.student-life .banner-btn{
     margin-top:15px;
 }
 /*=========================================
@@ -1859,22 +1741,6 @@ to{
     overflow:hidden;
     box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
-
-.accordion-button{
-    background:#fff;
-    color:#0D3F3C;
-    font-weight:600;
-}
-
-.accordion-button:not(.collapsed){
-    background:#128A80;
-    color:#fff;
-}
-
-.accordion-button:focus{
-    box-shadow:none;
-}
-
 .accordion-body{
     background:#FDF6EC;
 }
@@ -1922,30 +1788,6 @@ to{
 .social-card:hover p{
     color:#fff;
 }
-
-
-/*=========================================
-                CTA
-=========================================*/
-
-.cta-section{
-    background:#0D3F3C;
-    color:#fff;
-    padding:70px 20px;
-    text-align:center;
-}
-
-.cta-section h2{
-    font-weight:700;
-    margin-bottom:20px;
-}
-
-.cta-section p{
-    max-width:700px;
-    margin:0 auto 25px;
-    color:#FDF6EC;
-}
-
 
 /*=========================================
             RESPONSIVE
@@ -2147,4 +1989,198 @@ to{
         justify-content:center;
     }
 
+}
+/*=========================================
+           DARKMODE THEME BUTTON
+=========================================*/
+
+.theme-btn{
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    background:transparent;
+
+    color:#fff;
+
+    border:2px solid #fff;
+
+    border-radius:30px;
+
+    padding:8px 14px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.theme-btn:hover{
+
+    background:#fff;
+
+    color:#0D3F3C;
+
+}
+
+.theme-btn .theme-text{
+
+    font-size:14px;
+
+}
+/*=========================================
+            DARK MODE
+=========================================*/
+
+body.dark-mode{
+    background:#121212;
+    color:#f5f5f5;
+}
+
+/* Sections */
+body.dark-mode .section-light,
+body.dark-mode .section-grey,
+body.dark-mode .section-cream{
+    background:#1b1b1b;
+}
+
+/* Cards */
+body.dark-mode .stat-card,
+body.dark-mode .feature-card,
+body.dark-mode .about-feature-card,
+body.dark-mode .info-card,
+body.dark-mode .team-card,
+body.dark-mode .course-card,
+body.dark-mode .admission-card,
+body.dark-mode .apply-step,
+body.dark-mode .result-card,
+body.dark-mode .topper-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .contact-card,
+body.dark-mode .why-card,
+body.dark-mode .social-card,
+body.dark-mode .gallery-card,
+body.dark-mode .result-search-card,
+body.dark-mode .timeline-box div,
+body.dark-mode .hours-card{
+
+background:#242424;
+color:#ffffff;
+border:1px solid #3a3a3a;
+box-shadow:0 8px 20px rgba(0,0,0,.35);
+
+}
+
+/*=========================================
+        TEXT (Except Hero Banner)
+=========================================*/
+
+body.dark-mode .section-light h1,
+body.dark-mode .section-light h2,
+body.dark-mode .section-light h3,
+body.dark-mode .section-light h4,
+body.dark-mode .section-light h5,
+body.dark-mode .section-light h6,
+body.dark-mode .section-light p,
+body.dark-mode .section-light li,
+body.dark-mode .section-light span,
+
+body.dark-mode .section-grey h1,
+body.dark-mode .section-grey h2,
+body.dark-mode .section-grey h3,
+body.dark-mode .section-grey h4,
+body.dark-mode .section-grey h5,
+body.dark-mode .section-grey h6,
+body.dark-mode .section-grey p,
+body.dark-mode .section-grey li,
+body.dark-mode .section-grey span,
+
+body.dark-mode .section-cream h1,
+body.dark-mode .section-cream h2,
+body.dark-mode .section-cream h3,
+body.dark-mode .section-cream h4,
+body.dark-mode .section-cream h5,
+body.dark-mode .section-cream h6,
+body.dark-mode .section-cream p,
+body.dark-mode .section-cream li,
+body.dark-mode .section-cream span{
+    color:#f5f5f5;
+}
+/* Forms */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select{
+    background:#2f2f2f;
+    color:#ffffff;
+    border:1px solid #555;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder{
+    color:#bdbdbd;
+}
+
+/* Tables */
+body.dark-mode table{
+    background:#242424;
+    color:#ffffff;
+}
+
+body.dark-mode td{
+    background:#242424;
+    color:#ffffff;
+}
+
+body.dark-mode tbody tr:hover{
+    background:#2f2f2f;
+}
+
+/* Accordion */
+body.dark-mode .accordion-button{
+    background:#242424;
+    color:#ffffff;
+}
+
+body.dark-mode .accordion-body{
+    background:#1f1f1f;
+    color:#dddddd;
+}
+
+/* Documents Box */
+body.dark-mode .documents-box{
+    background:#242424;
+}
+
+/* Search Box */
+body.dark-mode .search-box input{
+    background:#2f2f2f;
+    color:#fff;
+}
+
+/* Gallery Popup */
+body.dark-mode .image-popup{
+    background:rgba(0,0,0,.95);
+}
+/*=========================================
+        STAT CARD TEXT FIX
+=========================================*/
+
+body.dark-mode .stat-card i{
+    color:#128A80 !important;
+}
+
+body.dark-mode .stat-card h2,
+body.dark-mode .stat-card h3,
+body.dark-mode .stat-card h4{
+    color:#ffffff !important;
+}
+
+body.dark-mode .stat-card p,
+body.dark-mode .stat-card span{
+    color:#ffffff !important;
 }
