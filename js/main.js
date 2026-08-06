@@ -363,3 +363,30 @@ if (themeToggle) {
     });
 
 }
+//=========================================
+// Scroll Reveal Animation
+//=========================================
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll(){
+
+    reveals.forEach((item,index)=>{
+
+        if(item.getBoundingClientRect().top < window.innerHeight - 100){
+
+            setTimeout(function(){
+
+                item.classList.add("active");
+
+           }, (index % 4) * 150);
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+revealOnScroll();

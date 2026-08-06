@@ -2067,12 +2067,15 @@ body.dark-mode .social-card,
 body.dark-mode .gallery-card,
 body.dark-mode .result-search-card,
 body.dark-mode .timeline-box div,
-body.dark-mode .hours-card{
+body.dark-mode .hours-card,
+body.dark-mode .mini-course-card,
+body.dark-mode .achievement-card,
+body.dark-mode .testimonial-box{
 
-background:#242424;
-color:#ffffff;
-border:1px solid #3a3a3a;
-box-shadow:0 8px 20px rgba(0,0,0,.35);
+    background:#242424;
+    color:#ffffff;
+    border:1px solid #3a3a3a;
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
 
 }
 
@@ -2111,12 +2114,31 @@ body.dark-mode .section-cream li,
 body.dark-mode .section-cream span{
     color:#f5f5f5;
 }
+
+/* Featured Courses */
+body.dark-mode .mini-course-card h4,
+body.dark-mode .mini-course-card p{
+    color:#fff !important;
+}
+
+/* Achievement */
+body.dark-mode .achievement-card h2,
+body.dark-mode .achievement-card p{
+    color:#fff !important;
+}
+
+/* Testimonial */
+body.dark-mode .testimonial-box h5,
+body.dark-mode .testimonial-box p{
+    color:#fff !important;
+}
+
 /* Forms */
 body.dark-mode input,
 body.dark-mode textarea,
 body.dark-mode select{
     background:#2f2f2f;
-    color:#ffffff;
+    color:#fff;
     border:1px solid #555;
 }
 
@@ -2126,14 +2148,10 @@ body.dark-mode textarea::placeholder{
 }
 
 /* Tables */
-body.dark-mode table{
-    background:#242424;
-    color:#ffffff;
-}
-
+body.dark-mode table,
 body.dark-mode td{
     background:#242424;
-    color:#ffffff;
+    color:#fff;
 }
 
 body.dark-mode tbody tr:hover{
@@ -2143,31 +2161,26 @@ body.dark-mode tbody tr:hover{
 /* Accordion */
 body.dark-mode .accordion-button{
     background:#242424;
-    color:#ffffff;
+    color:#fff;
 }
 
 body.dark-mode .accordion-body{
     background:#1f1f1f;
-    color:#dddddd;
+    color:#ddd;
 }
 
-/* Documents Box */
+/* Documents */
 body.dark-mode .documents-box{
     background:#242424;
-}
-
-/* Search Box */
-body.dark-mode .search-box input{
-    background:#2f2f2f;
-    color:#fff;
 }
 
 /* Gallery Popup */
 body.dark-mode .image-popup{
     background:rgba(0,0,0,.95);
 }
+
 /*=========================================
-        STAT CARD TEXT FIX
+        STAT CARD FIX
 =========================================*/
 
 body.dark-mode .stat-card i{
@@ -2176,11 +2189,58 @@ body.dark-mode .stat-card i{
 
 body.dark-mode .stat-card h2,
 body.dark-mode .stat-card h3,
-body.dark-mode .stat-card h4{
-    color:#ffffff !important;
-}
-
+body.dark-mode .stat-card h4,
 body.dark-mode .stat-card p,
 body.dark-mode .stat-card span{
-    color:#ffffff !important;
+    color:#fff !important;
+}
+/*=========================================
+        HERO PAGE LOAD ANIMATION
+=========================================*/
+
+.hero-left{
+    animation:heroFade 1s ease;
+}
+
+@keyframes heroFade{
+
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+/*=========================================
+        SCROLL REVEAL
+=========================================*/
+
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all .8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+/*=========================================
+      COURSE CARD STAGGER ANIMATION
+=========================================*/
+
+.delay-1{
+    transition-delay:.1s;
+}
+
+.delay-2{
+    transition-delay:.3s;
+}
+
+.delay-3{
+    transition-delay:.5s;
 }
