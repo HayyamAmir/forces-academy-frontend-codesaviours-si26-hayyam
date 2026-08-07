@@ -22,13 +22,17 @@
 .custom-navbar{
     background-color: #0d3f3c;
     padding: 14px 0;
+    position: sticky;
+top: 0;
+z-index: 1000;
     
 }
 
 .custom-navbar .navbar-brand{
     color: #ffffff;
     font-weight: 700;
-    font-size: 24px;   
+    font-size: 22px; 
+    margin-left: -15px;  
 }
 
 .custom-navbar .navbar-brand:hover{
@@ -36,7 +40,7 @@
 }
 
 .custom-navbar .navbar-nav{
-    gap: 6px;   /* links ke darmiyan controlled gap */
+    gap: 5px;   /* links ke darmiyan controlled gap */
 }
 
 .custom-navbar .nav-link{
@@ -74,6 +78,7 @@
     background:#e0a800;
     color:#000;
 }
+
 /*=========================
       MOBILE NAVBAR
 ==========================*/
@@ -2008,9 +2013,9 @@ to{
 
     border-radius:30px;
 
-    padding:8px 14px;
+    padding:8px 12px;
 
-    font-size:15px;
+    font-size:13px;
 
     font-weight:600;
 
@@ -2030,7 +2035,7 @@ to{
 
 .theme-btn .theme-text{
 
-    font-size:14px;
+    font-size:12px;
 
 }
 /*=========================================
@@ -2228,19 +2233,4 @@ body.dark-mode .stat-card span{
 .reveal.active{
     opacity:1;
     transform:translateY(0);
-}
-/*=========================================
-      COURSE CARD STAGGER ANIMATION
-=========================================*/
-
-.delay-1{
-    transition-delay:.1s;
-}
-
-.delay-2{
-    transition-delay:.3s;
-}
-
-.delay-3{
-    transition-delay:.5s;
 }
