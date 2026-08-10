@@ -322,6 +322,38 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+//=========================================
+// Gallery Filter
+//=========================================
+
+const filterButtons = document.querySelectorAll(".gallery-menu button");
+const galleryItems = document.querySelectorAll(".gallery-item");
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        const filter = this.dataset.filter;
+
+        filterButtons.forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        this.classList.add("active");
+
+        galleryItems.forEach(item => {
+
+            item.style.display =
+                filter === "all" ||
+                item.dataset.category === filter
+                    ? ""
+                    : "none";
+
+        });
+
+    });
+
+});
 /*=========================================
             DARK MODE
 =========================================*/

@@ -224,9 +224,6 @@ z-index: 1000;
     color:#0D3F3C;
     transform:translateY(-3px);
 }
-
-
-
 /*=========================================
             HERO CARD
 =========================================*/
@@ -395,8 +392,173 @@ z-index: 1000;
 .achievement-card:hover p{
     color:#fff;
 }
+/* Announcements */
+
+.announcements-section{
+    background:#FDF6EC;
+}
+
+.announcement-timeline{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.announcement-timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:#128A80;
+    transform:translateX(-50%);
+}
+
+.announcement-item{
+    position:relative;
+    width:50%;
+    padding:15px 40px;
+}
+
+.announcement-item:nth-child(odd){
+    left:0;
+    text-align:right;
+}
+
+.announcement-item:nth-child(even){
+    left:50%;
+}
+
+.announcement-dot{
+    position:absolute;
+    top:25px;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#128A80;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:2;
+}
+
+.announcement-item:nth-child(odd) .announcement-dot{
+    right:-22px;
+}
+
+.announcement-item:nth-child(even) .announcement-dot{
+    left:-22px;
+}
+
+.announcement-card{
+    background:#fff;
+    padding:25px;
+    border-radius:16px;
+    border:1px solid #ddd;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.announcement-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 25px rgba(0,0,0,.12);
+}
+
+.announcement-date{
+    color:#128A80;
+    font-size:14px;
+    font-weight:600;
+}
+
+.announcement-card h4{
+    margin:10px 0;
+}
+
+.announcement-card p{
+    margin-bottom:15px;
+}
+
+.announcement-card a{
+    color:#128A80;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.announcement-card a span{
+    transition:.3s;
+}
+
+.announcement-card a:hover span{
+    margin-left:5px;
+}
 
 
+/* Heading */
+
+.announcements-section .section-tag{
+    font-weight:700;
+}
+
+.announcements-section .section-text{
+    color:#000000;
+}
+
+
+/* Dark Mode */
+
+body.dark-mode .announcements-section{
+    background:#1b1b1b;
+}
+
+body.dark-mode .announcement-card{
+    background:#242424;
+    color:#fff;
+    border-color:#3a3a3a;
+}
+
+body.dark-mode .announcement-card h4,
+body.dark-mode .announcement-card p{
+    color:#fff;
+}
+
+body.dark-mode .announcements-section .section-tag{
+    color:#fff;
+    font-weight:700;
+}
+
+body.dark-mode .announcements-section .section-heading{
+    color:#FFC107;
+}
+
+body.dark-mode .announcements-section .section-text{
+    color:#fff;
+}
+
+
+@media(max-width:768px){
+
+    .announcement-timeline::before{
+        left:20px;
+    }
+
+    .announcement-item,
+    .announcement-item:nth-child(even),
+    .announcement-item:nth-child(odd){
+        width:100%;
+        left:0;
+        text-align:left;
+        padding:15px 15px 15px 55px;
+    }
+
+    .announcement-item:nth-child(odd) .announcement-dot,
+    .announcement-item:nth-child(even) .announcement-dot{
+        left:-2px;
+        right:auto;
+    }
+
+}
 /*=========================================
             TESTIMONIAL
 =========================================*/
