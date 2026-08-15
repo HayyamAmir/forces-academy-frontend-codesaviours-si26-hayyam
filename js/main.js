@@ -422,3 +422,53 @@ function revealOnScroll(){
 window.addEventListener("scroll", revealOnScroll);
 
 revealOnScroll();
+
+
+
+emailjs.init({
+    publicKey: "871oQR-hSow2qCjoz"
+});
+
+const enquiryForm = document.getElementById("enquiryForm");
+
+if (enquiryForm) {
+
+    enquiryForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const name = document.getElementById("enquiryName").value;
+        const email = document.getElementById("enquiryEmail").value;
+        const phone = document.getElementById("enquiryPhone").value;
+        const program = document.getElementById("enquiryProgram").value;
+        const message = document.getElementById("enquiryMessage").value;
+
+        emailjs.send(
+            "service_0pml4ph",
+            "template_tjzx7ie",
+            {
+                name: name,
+                email: email,
+                phone: phone,
+                program: program,
+                message: message
+            }
+        )
+        .then(function () {
+
+            alert("Admission enquiry sent successfully!");
+
+            enquiryForm.reset();
+
+        })
+        .catch(function (error) {
+
+            console.error("EmailJS Error:", error);
+
+            alert("Failed to send enquiry. Please try again.");
+
+        });
+
+    });
+
+}
