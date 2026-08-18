@@ -19,19 +19,16 @@ This project was built using HTML5, CSS3, Bootstrap 5, and JavaScript. It provid
 
 ![Home Page](images/home-screenshot.png)
 
----
-
 ## About Page
 
 ![About Page](images/about-screenshot.png)
-
----
 
 ## Courses Page
 
 ![Courses Page](images/courses-screenshot.png)
 
-
+## Admissions Page
+![Admission Page](images/admission-screenshot.png)
 # Tech Stack
 
 - HTML5
@@ -40,7 +37,10 @@ This project was built using HTML5, CSS3, Bootstrap 5, and JavaScript. It provid
 - JavaScript
 - Bootstrap Icons
 - Google Fonts (Poppins)
-
+- EmailJS
+- Git & GitHub
+- GitHub Pages
+  
 # Features
 
 - Responsive Design
@@ -59,6 +59,14 @@ This project was built using HTML5, CSS3, Bootstrap 5, and JavaScript. It provid
 - Animated Statistics
 - Back to Top Button
 - Mobile Friendly Layout
+- - Dark/Light Mode
+- Smooth Animations
+- Admission Enquiry Form with EmailJS
+- Student Portal Integration
+- Latest Announcements
+- SEO Meta Information
+- Favicon
+- Image Alt Text for Accessibility
 - Clean UI/UX Design
 
 # Pages Included
