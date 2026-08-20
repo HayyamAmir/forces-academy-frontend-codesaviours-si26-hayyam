@@ -21,13 +21,13 @@ Forces Academy Faisalabad is a responsive educational website designed to provid
 The project was developed as part of the Code Saviours Summer Internship 2026 (SI-26) under the Frontend Development Track.
 
 The main focus of this project was to build a professional frontend using modern web development technologies while maintaining:
-Clean and consistent UI
-Responsive design
-Easy navigation
-Mobile-friendly layouts
-Reusable styling
-Professional educational branding
-User-friendly content presentation
+-Clean and consistent UI
+-Responsive design
+-Easy navigation
+-Mobile-friendly layouts
+-Reusable styling
+-Professional educational branding
+-User-friendly content presentation
 
 # Screenshots
 
@@ -88,17 +88,17 @@ User-friendly content presentation
 
 The website follows a consistent visual identity throughout all pages.
 
-Design Highlights:
-Modern educational website layout
-Consistent navigation
-Professional typography
-Responsive Bootstrap grid
-Rounded cards and buttons
-Hero/banner sections
-Green-based academy theme
-Cream-colored content sections
-Consistent footer design
-Mobile-first responsive approach
+-Design Highlights:
+ -Modern educational website layout
+ -Consistent navigation
+ -Professional typography
+ -Responsive Bootstrap grid
+ -Rounded cards and buttons
+ -Hero/banner sections
+ -Green-based academy theme
+ -Cream-colored content sections
+ -Consistent footer design
+ -Mobile-first responsive approach
 # Typography
 
 The website primarily uses Poppins for a clean and modern appearance.
@@ -111,9 +111,10 @@ The website primarily uses Poppins for a clean and modern appearance.
 - Results
 - Gallery
 - Contact
-# Project Structure
+##  Project Structure
+
+```text
 forces-academy-frontend/
-│
 ├── index.html
 ├── about.html
 ├── courses.html
@@ -125,25 +126,29 @@ forces-academy-frontend/
 ├── css/
 │   └── style.css
 │
-├── js/
-│   └── script.js
-│
 ├── images/
-│   ├── logo/
-│   ├── banners/
-│   ├── courses/
-│   ├── gallery/
-│   └── icons/
+│   ├── home.png
+│   ├── about.png
+│   ├── results.png
+│   ├── admissions.png
+│   ├── contact.png
+│   ├── courses.png
+│   └── gallery.png
+│
+├── js/
+│   └── main.js
 │
 └── README.md
+```
+
 # Responsive Design
 
 The website is designed to work across different screen sizes, including:
 
- Desktop
- Laptop
- Mobile
- Tablet
+- Desktop
+ -Laptop
+ -Mobile
+ -Tablet
 #  How to Run
 
 To run the project locally:
@@ -162,22 +167,22 @@ The website is deployed using GitHub Pages.
 
 Deployment steps:
 
-Upload the project to GitHub.
-Push the project to the main branch.
-Open the repository settings.
-Go to Pages.
-Select the main branch.
-Select the root folder.
-Save the settings.
-GitHub Pages generates the live website URL.
+-Upload the project to GitHub.
+-Push the project to the main branch.
+-Open the repository settings.
+-Go to Pages.
+-Select the main branch.
+-Select the root folder.
+-Save the settings.
+-GitHub Pages generates the live website URL.
 # Internship Information
 
-Program: Code Saviours Summer Internship 2026
-Internship Code: SI-26
-Track: Frontend Development
-Project: Forces Academy Faisalabad Website
-Technology Stack: HTML5, CSS3, Bootstrap 5, JavaScript
-Deployment: GitHub Pages
+-Program: Code Saviours Summer Internship 2026
+-Internship Code: SI-26
+-Track: Frontend Development
+-Project: Forces Academy Faisalabad Website
+-Technology Stack: HTML5, CSS3, Bootstrap 5, JavaScript
+-Deployment: GitHub Pages
 # Built By
 
  Hayyam Amir | Code Saviours SI-26 | 2026
